@@ -1,12 +1,11 @@
-# Padre Ginos
+# Padre Gino's
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Padre Gino’s is a React + Vite pizza ordering app that is responsive to all devices, supports keyboard navigation, is compatible with screen readers, and optimized for performance metrics. It includes unit tests and automated tests that cover both key user flows and accessibility.
 
-Currently, two official plugins are available:
+## Starting the API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+An API is included to serve the pizza list data required by the app. To start it, navigate to the api folder and run `npm start`. The API will run on port 3000. Vite dev server runs on a different port and to avoid CORS issues, it’s configured to proxy API requests.
 
-## Expanding the ESLint configuration
+## Starting the app
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+From the root folder, run `npm run dev` to start the Vite development server. The app will be available at port 5173 (or another available port if that one is in use). Any changes to the source code will be hot-reloaded automatically — no need to refresh the browser manually.
