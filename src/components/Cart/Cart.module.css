@@ -1,0 +1,17 @@
+.cartItem {
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartTotal {
+  border-top: 1px dotted var(--color-neutral);
+  font-weight: 800;
+}
+
+.cartActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  gap: 8px;
+}
