@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import { RouterProvider, createRouter } from "@tanstack/react-router";
+import { routeTree } from "./routeTree.gen";
+import "./App.css";
+import CartContext from "./contexts/CartContext";
+import PizzaContext from "./contexts/PizzaContext";
+import NotificationContext from "./contexts/NotificationContext";
 
-function App() {
-  const [count, setCount] = useState(0)
+const router = createRouter({ routeTree });
+
+export default function App() {
+  const cartHook = useState([]);
+  const pizzaHook = useState(null);
+  const notificationHook = useState("");
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <CartContext.Provider value={cartHook}>
+      <PizzaContext.Provider value={pizzaHook}>
+        <NotificationContext.Provider value={notificationHook}>
+          <RouterProvider router={router} />
+        </NotificationContext.Provider>
+      </PizzaContext.Provider>
+    </CartContext.Provider>
+  );
 }
-
-export default App

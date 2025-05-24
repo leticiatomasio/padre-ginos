@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.header svg {
+  fill: var(--color-brand-base);
+}
+
+.headerCartLink {
+  position: relative;
+}
+
+.headerCartCount {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--color-secondary);
+  border-radius: 100%;
+  padding: 1px 6px;
+}
