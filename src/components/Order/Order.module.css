@@ -1,0 +1,45 @@
+.orderPizza {
+  display: flex;
+  gap: 30px;
+}
+
+.orderPizzaInformation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.orderPizzaFieldset {
+  display: flex;
+  gap: 15px;
+}
+
+.orderPizzaRadioOption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.orderPizzaImage {
+  height: 300px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+.orderAction {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.orderPizzaLegend,
+.orderPizzaPrice {
+  font-weight: 800;
+}
+
+.orderPizzaPrice {
+  font-size: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
