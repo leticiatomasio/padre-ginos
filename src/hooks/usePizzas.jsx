@@ -5,12 +5,12 @@ export const usePizzas = () => {
   const [pizzas, setPizzas] = useState([]);
 
   useEffect(() => {
-    async function fetchPizzaTypes() {
+    async function fetchPizzas() {
       const data = await getPizzas();
       setPizzas(data);
     }
 
-    fetchPizzaTypes();
+    fetchPizzas();
   }, []);
 
   return pizzas;
